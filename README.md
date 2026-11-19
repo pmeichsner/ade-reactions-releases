@@ -4,7 +4,7 @@ Automatischer Reaction-Schnitt für Adobe Premiere Pro auf Windows. Die große F
 
 ## Download und Installation
 
-Die aktuelle vollständige Installationsdatei findet ihr unter [Releases](https://github.com/pmeichsner/ade-reactions-releases/releases/latest). Nur die Datei **ADE-Reactions-1.1.2-Setup-x64.exe** herunterladen. Die anderen Release-Dateien werden vom automatischen Updater verwendet und müssen nicht manuell heruntergeladen werden.
+Die aktuelle vollständige Installationsdatei findet ihr unter [Releases](https://github.com/pmeichsner/ade-reactions-releases/releases/latest). Nur die Datei **ADE-Reactions-1.2.0-Setup-x64.exe** herunterladen. Die anderen Release-Dateien werden vom automatischen Updater verwendet und müssen nicht manuell heruntergeladen werden.
 
 1. Premiere-Projekte speichern und Premiere schließen. Eine im UXP Developer Tool geladene Entwicklungsversion vorher entladen.
 2. Das vollständige Setup starten.
@@ -22,7 +22,13 @@ Voraussetzungen: Windows x64, Adobe Premiere Pro 27.0 und Creative Cloud Desktop
 | A1 | TV-Ton |
 | A2 | Eure Stimmen |
 
-Material vorher synchronisieren und TV-Pausen bereits schneiden. Sprache ist immer Deutsch, Facecam-Nachlauf immer 0,25 Sekunden. Die Bildwechsel-Erkennung bietet drei Stufen. Auf V3 wird die längste Verschachtelung als Facecam-Quelle erkannt; andere Quellen wie Übergangsgrafiken bleiben erhalten. Jede Verarbeitung erzeugt eine neue Sequenzkopie. Für einen neuen Lauf die Ausgangssequenz öffnen, damit sich Absenkungen nicht aufaddieren.
+Material vorher synchronisieren und TV-Pausen bereits schneiden. Sprache ist immer Deutsch, Facecam-Nachlauf immer 0,25 Sekunden. Die Bildwechsel-Erkennung bietet drei Stufen. Auf V3 wird die Facecam anhand ihrer gesamten Spurbelegung erkannt; andere Quellen wie Übergangsgrafiken bleiben erhalten. Jede Verarbeitung erzeugt eine neue Sequenzkopie. Für einen neuen Lauf die Ausgangssequenz öffnen, damit sich Absenkungen nicht aufaddieren.
+
+## TV-Anteil prüfen
+
+Original-Folgenlänge in Minuten, MM:SS oder HH:MM:SS eingeben, RTL (15 %) oder JOYN (20 %) wählen und **Berechnen** klicken. Die einmalige TV-Materialdauer wird innerhalb der Grenze grün, darüber rot angezeigt. Dazu erscheinen Anteil, Maximaldauer und die gezählte Timeline-Dauer mit Wiederholungen.
+
+Es zählt aktives TV-Material auf V1 ausschließlich unter deaktivierten Facecam-Clips auf V3. Leere V3-Bereiche bei An- und Abmoderation zählen nicht. Wiederholungen derselben Datei und Quellzeit zählen nur einmal, beispielsweise im Cold Opener und Hauptteil. Teilweise Überschneidungen werden zusammengeführt. Separat neu exportierte Dateien werden nicht per Bildvergleich erkannt. Die Berechnung liest die aktuelle Sequenz ohne Schnittänderungen; nach Bearbeitungen erneut berechnen. Presets wurden entfernt.
 
 ## Automatische Updates
 
